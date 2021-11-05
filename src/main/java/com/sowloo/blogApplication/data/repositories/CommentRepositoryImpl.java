@@ -15,9 +15,9 @@ public class CommentRepositoryImpl implements CommentRepository{
     }
 
     @Override
-    public Comment findById(String id) {
+    public Comment findById(Integer id) {
         for (Comment comment : comments){
-            if(comment.getComment_id().equalsIgnoreCase(id)){
+            if(comment.getComment_id().equals(id)){
                 return comment;
             }
         }
@@ -30,7 +30,7 @@ public class CommentRepositoryImpl implements CommentRepository{
     }
 
     @Override
-    public void deleteById(String id) {
+    public void deleteById(Integer id) {
         Comment comment = findById(id);
         comments.remove(comment);
     }

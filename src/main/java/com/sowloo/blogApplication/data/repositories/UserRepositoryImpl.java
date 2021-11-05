@@ -17,9 +17,9 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User findByUserId(String id) {
+    public User findByUserId(Integer id) {
         for(User user : users) {
-            if(user.getUserId().equalsIgnoreCase(id)){
+            if(user.getUserId().equals(id)){
                 return user;
             }
         }
@@ -32,7 +32,7 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void deleteByUserId(String id) {
+    public void deleteByUserId(Integer id) {
         User user = findByUserId(id);
         users.remove(user);
     }

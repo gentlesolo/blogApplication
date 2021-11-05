@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface UserRepository {
     User save(User user);
-    User findByUserId(String id);
+    User findByUserId(Integer id);
     void delete(User user);
-    void deleteByUserId(String id);
+    void deleteByUserId(Integer id);
     List<User> findAll();
 }

@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface CommentRepository {
     Comment save(Comment comment);
-    Comment findById(String id);
+    Comment findById(Integer id);
     void delete(Comment comment);
-    void deleteById(String id);
+    void deleteById(Integer id);
     List<Comment> findAll();
 }

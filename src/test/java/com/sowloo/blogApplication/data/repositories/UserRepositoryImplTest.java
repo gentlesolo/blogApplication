@@ -18,7 +18,7 @@ class UserRepositoryImplTest {
     @Test
     void save() {
         User user = new User();
-        user.setUserId("234");
+        user.setUserId(234);
         user.setFirstName("Tunde");
         user.setLastName("Bakeri");
         User savedUser = userRepository.save(user);
@@ -28,42 +28,42 @@ class UserRepositoryImplTest {
     @Test
     void findByUserId() {
         User user = new User();
-        user.setUserId("234");
+        user.setUserId(234);
         user.setFirstName("Tunde");
         user.setLastName("Bakeri");
         User savedUser = userRepository.save(user);
-        User foundUser = userRepository.findByUserId("234");
+        User foundUser = userRepository.findByUserId(234);
         assertEquals(savedUser, foundUser);
     }
 
     @Test
     void delete() {
         User user = new User();
-        user.setUserId("234");
+        user.setUserId(234);
         user.setFirstName("Tunde");
         user.setLastName("Bakeri");
         User savedUser = userRepository.save(user);
-        assertNotNull(userRepository.findByUserId("234"));
+        assertNotNull(userRepository.findByUserId(234));
         userRepository.delete(user);
-        assertNull(userRepository.findByUserId("234"));
+        assertNull(userRepository.findByUserId(234));
     }
 
     @Test
     void deleteByUserId() {
         User user = new User();
-        user.setUserId("234");
+        user.setUserId(234);
         user.setFirstName("Tunde");
         user.setLastName("Bakeri");
         User savedUser = userRepository.save(user);
-        assertNotNull(userRepository.findByUserId("234"));
-        userRepository.deleteByUserId("234");
-        assertNull(userRepository.findByUserId("234"));
+        assertNotNull(userRepository.findByUserId(234));
+        userRepository.deleteByUserId(234);
+        assertNull(userRepository.findByUserId(234));
     }
 
     @Test
     void findAll() {
         User user = new User();
-        user.setUserId("234");
+        user.setUserId(234);
         user.setFirstName("Tunde");
         user.setLastName("Bakeri");
         userRepository.save(user);

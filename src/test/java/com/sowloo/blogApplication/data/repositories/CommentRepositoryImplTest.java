@@ -23,10 +23,10 @@ class CommentRepositoryImplTest {
     @Test
     void save() {
         Comment comment = new Comment();
-        comment.setComment_id("342");
+        comment.setComment_id(342);
         comment.setComment_title("introduction");
         comment.setComment_description("what a nice post you have here");
-        comment.setUser_id("234");
+        comment.setUser_id(234);
         Comment savedComment = commentRepository.save(comment);
         assertEquals(comment, savedComment);
     }
@@ -34,46 +34,46 @@ class CommentRepositoryImplTest {
     @Test
     void findById() {
         Comment comment = new Comment();
-        comment.setComment_id("342");
+        comment.setComment_id(342);
         comment.setComment_title("introduction");
         comment.setComment_description("what a nice post you have here");
-        comment.setUser_id("234");
+        comment.setUser_id(234);
         Comment savedComment = commentRepository.save(comment);
-        Comment foundComment = commentRepository.findById("342");
+        Comment foundComment = commentRepository.findById(342);
         assertEquals(savedComment, foundComment);
     }
 
     @Test
     void delete() {
         Comment comment = new Comment();
-        comment.setComment_id("342");
+        comment.setComment_id(342);
         comment.setComment_title("introduction");
         comment.setComment_description("what a nice post you have here");
-        comment.setUser_id("234");
+        comment.setUser_id(234);
         Comment savedComment = commentRepository.save(comment);
         commentRepository.delete(comment);
-        assertNull(commentRepository.findById("342"));
+        assertNull(commentRepository.findById(342));
     }
 
     @Test
     void deleteById() {
         Comment comment = new Comment();
-        comment.setComment_id("342");
+        comment.setComment_id(342);
         comment.setComment_title("introduction");
         comment.setComment_description("what a nice post you have here");
-        comment.setUser_id("234");
+        comment.setUser_id(234);
         Comment savedComment = commentRepository.save(comment);
-        commentRepository.deleteById("342");
-        assertNull(commentRepository.findById("342"));
+        commentRepository.deleteById(342);
+        assertNull(commentRepository.findById(342));
     }
 
     @Test
     void findAll() {
         Comment comment = new Comment();
-        comment.setComment_id("342");
+        comment.setComment_id(342);
         comment.setComment_title("introduction");
         comment.setComment_description("what a nice post you have here");
-        comment.setUser_id("234");
+        comment.setUser_id(234);
         commentRepository.save(comment);
         commentRepository.save(comment);
         commentRepository.save(comment);

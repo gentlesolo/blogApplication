@@ -15,7 +15,7 @@ public class BlogRepositoryImpl implements BlogRepository {
     }
 
     @Override
-    public Blog findByBlogId(String id) {
+    public Blog findByBlogId(Integer id) {
         for(Blog blog : blogs){
             if(blog.getBlogId().equals(id)){
                 return blog;
@@ -31,9 +31,14 @@ public class BlogRepositoryImpl implements BlogRepository {
 
     @Override
     public void deleteByBlogId(String id) {
-        Blog blog = findByBlogId(id);
-        blogs.remove(blog);
+
     }
+
+//    @Override
+//    public void deleteByBlogId(Integer id) {
+//        Blog blog = findByBlogId(id);
+//        blogs.remove(blog);
+//    }
 
     @Override
     public List<Blog> findAll() {

@@ -7,9 +7,10 @@ import java.util.List;
 
 @Data
 public class Comment {
-    private List<Blog> blogs = new ArrayList<>();
-    private String comment_id;
-    private String user_id;
+    private Integer blogId;
+    private Integer comment_id;
+    private Integer user_id;
     private String comment_title;
     private String comment_description;
+    private String localDateTime;
 }
